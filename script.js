@@ -63,12 +63,12 @@ const counterMaker = function () {
     // const sec = document.querySelector("#sec");
 
     //위에 있는것도 객체로 변경해보자 
-    const documentObj = {
-        days : document.querySelector("#days"),
-        hours : document.querySelector("#hours"),
-        min : document.querySelector("#min"),
-        sec : document.querySelector("#sec"),
-    }
+    // const documentObj = {
+    //     days : document.querySelector("#days"),
+    //     hours : document.querySelector("#hours"),
+    //     min : document.querySelector("#min"),
+    //     sec : document.querySelector("#sec"),
+    // }
 
     //객체에 있는 값으로 사용해보자
     // documentObj['days'].textContent = remainingObj['remainingDate'];
@@ -78,17 +78,29 @@ const counterMaker = function () {
 
     // 객체에 담은 것들을 반복문을 사용해서 적어보자(반복문을 활용한 데이터 리팩토링)
     const timeKeys = Object.keys(remainingObj);
-    const docKeys = Object.keys(documentObj);
+    // const docKeys = Object.keys(documentObj);
+    // for in 문을 쓰면 필요없음
 
     // for(let i = 0; i < timeKeys.length; i+=1){
     //     documentObj[docKeys[i]].textContent = remainingObj[timeKeys[i]]
     // }
 
     // for in 반복문 활용해보기
-    for(let key in documentObj){
-        console.log(key);
-    }
+    // let i = 0;
+    // for(let key in documentObj){
+    //     console.log(documentObj[key], key);
+    //     documentObj[key].textContent = remainingObj[timeKeys[i]]
+    //     i++;
+    // }
     // for in문은 객체에 활용한다
-    
+    // for of 문은 배열에 활용한다
+
+    // documentObj를 배열안에 넣어서 for of 문에 활용해보기
+    const documentArr = ['days','hours','min','sec'];
+    let i = 0;
+    for(let tag of documentArr){
+        document.getElementById(tag).textContent = remainingObj[timeKeys[i]]
+        i++
+    }
     
 }
