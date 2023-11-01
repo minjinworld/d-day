@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- 스크립트태그 상단에 작성할때 defer 작성해줄것! -->
+    <script src="./script.js" defer></script>
+    <title>D-Day</title>
+</head>
+<body>
+    <h1>D-Day</h1>
+    <div id="d-day-container">
+        <div class="d-day-child-container">
+            <span id="days">0</span>
+            <span>일</span>
+        </div>
+        <div class="d-day-child-container">
+            <span id="hours">0</span>
+            <span>시간</span>
+        </div>
+        <div class="d-day-child-container">
+            <span id="min">0</span>
+            <span>분</span>
+        </div>
+        <div class="d-day-child-container">
+            <span id="sec">0</span>
+            <span>초</span>
+        </div>
+    </div>
+
+    <div id="d-day-message"></div>
+
+    <div id="target-selector">
+        <input id="target-year-input" class="target-input" size="5"> -
+        <input id="target-month-input" class="target-input" size="5"> -
+        <input id="target-date-input" class="target-input" size="5">    
+    </div>
+
+    <button id="start-btn" onclick="counterMaker()">카운트다운 시작</button>
+
+
+
+    <!-- 꼭 하단에 작성해줄것! -->
+    <!-- <script src="./script.js"></script> -->
+
+</body>
+</html>
